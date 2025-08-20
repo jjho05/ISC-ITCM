@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Egresados - ITCM</title>
+    <!-- NUEVA: Meta descripción para SEO -->
+    <meta name="description" content="Conecta con la comunidad de egresados de Ingeniería en Sistemas Computacionales del ITCM. Explora servicios, oportunidades de networking, y conoce historias de éxito.">
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+        /* Estilo para hacer la tarjeta clickable con un efecto visual */
+        .clickable-card {
+            @apply block cursor-pointer transition-transform hover:-translate-y-2 hover:shadow-lg;
+        }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+<!-- PEGAR EN: egresados.html -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+    <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+    <div class="flex items-center gap-4">
+        <nav class="hidden items-center gap-8 md:flex">
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="index.html">Inicio</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+            <a class="text-sm font-bold text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        </nav>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+        <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+    <nav class="flex flex-col items-center justify-center h-full gap-8">
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="index.html">Inicio</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+        <a class="text-2xl font-bold text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+    </nav>
+</div>
+        
+        <!-- CONTENIDO PRINCIPAL ADAPTADO -->
+        <main class="flex-1">
+            <!-- Encabezado de la Sección CON IMAGEN DE FONDO -->
+            <section class="relative flex items-center justify-center py-40 text-white bg-cover" 
+                style='background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url(https://scontent.ftam1-1.fna.fbcdn.net/v/t39.30808-6/515816729_24206949375565230_2131311674347915558_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEgh6diPajml0OUNHu6iI4qqmnqVDyuJvmqaepUPK4m-UkRS9KNOQPK7xNRUEBvXM7mJqFLHG7tpsgCwOUeLzy2&_nc_ohc=kRMKd2HgJK4Q7kNvwFgoFdo&_nc_oc=AdkdAAfKz_xIyzuPHPdmgfHilXGB05ha49vq-fcpZdYwTTnBWrRYn6n-6zHNqBoubrs&_nc_zt=23&_nc_ht=scontent.ftam1-1.fna&_nc_gid=eOH5bzSgLsG0L-gb_OoaDw&oh=00_AfR_RaSj2Dw6SxexqWXQMhcvykO_n6K6yQnR12uOIdZ3yg&oe=6889E9ED);'>
+                <!-- NOTA PARA TI: Reemplaza la URL de la imagen de fondo con una imagen real de tu salón de conferencias o un espacio similar.
+                     Asegúrate de que la imagen sea de alta calidad y que el texto siga siendo legible. -->
+                <div class="container mx-auto max-w-4xl px-4 text-center z-10">
+                    <h1 class="text-5xl font-bold tracking-tighter">Comunidad de Egresados</h1>
+                    <p class="mt-4 text-lg text-gray-200">
+                        Mantente conectado y comprometido con la red de egresados de Ingeniería en Sistemas Computacionales del ITCM. Explora los servicios y oportunidades disponibles para nuestros graduados y descubre el impacto de su trayectoria.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Sección de Servicios -->
+            <section class="py-24">
+                <div class="mx-auto max-w-6xl px-4">
+                    <h2 class="text-3xl font-bold text-center text-[var(--secondary-color)] mb-12">Servicios y Beneficios para Egresados</h2>
+                    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+                        <!-- Tarjeta de Servicio 1: Conferencias y Talleres -->
+                        <!-- ENLACE PARA CONTACTAR SOBRE CONFERENCIAS -->
+                        <a href="mailto:sistemas@cdmadero.tecnm.mx?subject=Consulta%20sobre%20Conferencias%20y%20Talleres%20para%20Egresados" class="clickable-card">
+                            <div class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-3 text-white mx-auto mb-4">
+                                    <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg"><path d="M224,96H160V40a16,16,0,0,0-16-16H48A16,16,0,0,0,32,40V216a16,16,0,0,0,16,16H144a16,16,0,0,0,16-16V160h64a16,16,0,0,0,16-16V112A16,16,0,0,0,224,96ZM144,208H48V40h96V96H96a16,16,0,0,0-16,16v32a16,16,0,0,0,16,16h48Zm64-64H160V112h56Z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-[var(--secondary-color)] text-center">Conferencias y Talleres</h3>
+                                <p class="text-[var(--text-secondary)] text-center">
+                                    Asiste a conferencias y talleres exclusivos dirigidos por egresados destacados y expertos de la industria. Mantente actualizado con las últimas tendencias en ingeniería de sistemas, mejora tus habilidades y expande tu red de contactos.
+                                </p>
+                            </div>
+                        </a>
+                        <!-- Tarjeta de Servicio 2: Desarrollo Profesional Continuo -->
+                        <!-- ENLACE PARA CONTACTAR SOBRE DESARROLLO PROFESIONAL -->
+                        <a href="mailto:sistemas@cdmadero.tecnm.mx?subject=Consulta%20sobre%20Desarrollo%20Profesional%20para%20Egresados" class="clickable-card">
+                            <div class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-3 text-white mx-auto mb-4">
+                                    <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg"><path d="M208,48H48A16,16,0,0,0,32,64V192a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V64A16,16,0,0,0,208,48ZM88,104a8,8,0,0,1,0-16h80a8,8,0,0,1,0,16Zm0,32a8,8,0,0,1,0-16h80a8,8,0,0,1,0,16Zm0,32a8,8,0,0,1,0-16h80a8,8,0,0,1,0,16Z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-[var(--secondary-color)] text-center">Desarrollo Profesional Continuo</h3>
+                                <p class="text-[var(--text-secondary)] text-center">
+                                    Mejora tus habilidades con acceso a cursos especializados, seminarios y programas de certificación diseñados para egresados. Los temas abarcan desde técnicas avanzadas de programación hasta gestión de proyectos, liderazgo y nuevas tecnologías emergentes.
+                                </p>
+                            </div>
+                        </a>
+                        <!-- Tarjeta de Servicio 3: Programa de Mentoría -->
+                        <!-- ENLACE PARA CONTACTAR SOBRE MENTORÍA -->
+                        <a href="mailto:sistemas@cdmadero.tecnm.mx?subject=Consulta%20sobre%20Programa%20de%20Mentor%C3%ADa%20para%20Egresados" class="clickable-card">
+                            <div class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-3 text-white mx-auto mb-4">
+                                    <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg"><path d="M128,104a48,48,0,1,0-48-48A48.05,48.05,0,0,0,128,104Zm0-80a32,32,0,1,1-32,32A32,32,0,0,1,128,24Zm96,160a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8,56,56,0,0,0,56-56h64A56,56,0,0,0,216,184ZM40,168h0a72.06,72.06,0,0,1,144,0h0a8,8,0,0,1-16,0,56,56,0,0,0-112,0,8,8,0,0,1-16,0Z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-[var(--secondary-color)] text-center">Programa de Mentoría</h3>
+                                <p class="text-[var(--text-secondary)] text-center">
+                                    Conecta con egresados experimentados y profesionales líderes que pueden ofrecerte guía, consejos y apoyo en tu desarrollo de carrera. Nuestro programa de mentoría te brinda una valiosa perspectiva para alcanzar tus metas profesionales.
+                                </p>
+                            </div>
+                        </a>
+                        <!-- Tarjeta de Servicio 4: Oportunidades de Networking -->
+                        <!-- ENLACE DIRECTO A FACEBOOK (u otra red social oficial de egresados) -->
+                        <a href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" class="clickable-card">
+                            <div class="flex flex-col gap-4 rounded-xl border border-gray-200 bg-white p-8 shadow-sm">
+                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-3 text-white mx-auto mb-4">
+                                    <svg fill="currentColor" height="28px" viewBox="0 0 256 256" width="28px" xmlns="http://www.w3.org/2000/svg"><path d="M220.24,116.32l-96-72a8,8,0,0,0-8.48,0l-96,72A8,8,0,0,0,16,128V216a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V128A8,8,0,0,0,220.24,116.32ZM208,128V208H168V152a8,8,0,0,0-8-8H96a8,8,0,0,0-8,8v56H48V128L128,68.21Z"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-[var(--secondary-color)] text-center">Oportunidades de Networking</h3>
+                                <p class="text-[var(--text-secondary)] text-center">
+                                    Expande tu red profesional participando en eventos exclusivos para egresados, ferias de empleo y reuniones especializadas. Conecta con colegas, líderes de la industria y potenciales empleadores en el dinámico campo de la ingeniería de sistemas.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUEVA SECCIÓN: Historias de Éxito de Nuestros Egresados -->
+            <section class="bg-[var(--accent-color)] py-20 sm:py-24">
+                <div class="mx-auto max-w-6xl px-4 text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl mb-12">Historias de Éxito de Nuestros Egresados</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- HISTORIA DE ÉXITO 1: Espacio para contenido real -->
+                        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                            <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO -->
+                            <img src="https://i.pravatar.cc/150?img=47" alt="Foto de Egresada ITCM" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-[var(--primary-color)]">
+                            <!-- FIN: ESPACIO PARA FOTO REAL -->
+
+                            <!-- INICIO: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+                            <h3 class="text-xl font-bold text-[var(--secondary-color)] mb-2">Ing. Valeria S. Cruz</h3>
+                            <p class="text-sm text-[var(--text-secondary)] mb-4">Egresada 2010 | Arquitecta de Software Senior, Tech Solutions Corp.</p>
+                            <!-- FIN: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+
+                            <!-- INICIO: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                            <p class="text-base italic text-[var(--text-primary)]">"La sólida base en desarrollo de software y la ética profesional que aprendí en el ITCM fueron clave para mi carrera. Hoy diseño sistemas complejos y aplico cada día lo aprendido."</p>
+                            <!-- FIN: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                        </div>
+                        <!-- HISTORIA DE ÉXITO 2: Espacio para contenido real -->
+                        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                            <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO -->
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Foto de Egresado ITCM" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-[var(--primary-color)]">
+                            <!-- FIN: ESPACIO PARA FOTO REAL -->
+
+                            <!-- INICIO: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+                            <h3 class="text-xl font-bold text-[var(--secondary-color)] mb-2">Dr. Javier P. Morales</h3>
+                            <p class="text-sm text-[var(--text-secondary)] mb-4">Egresado 2015 | Investigador de IA, Instituto Nacional de Tecnología</p>
+                            <!-- FIN: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+
+                            <!-- INICIO: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                            <p class="text-base italic text-[var(--text-primary)]">"Mi curiosidad por la inteligencia artificial se encendió aquí. El ITCM me dio las herramientas para perseguir mi pasión y ahora estoy contribuyendo a la investigación de vanguardia."</p>
+                            <!-- FIN: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                        </div>
+                        <!-- HISTORIA DE ÉXITO 3: Espacio para contenido real -->
+                        <div class="bg-white p-8 rounded-lg shadow-md border border-gray-200">
+                            <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO -->
+                            <img src="https://i.pravatar.cc/150?img=25" alt="Foto de Egresada ITCM" class="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-[var(--primary-color)]">
+                            <!-- FIN: ESPACIO PARA FOTO REAL -->
+
+                            <!-- INICIO: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+                            <h3 class="text-xl font-bold text-[var(--secondary-color)] mb-2">Lic. Sofía R. Castillo</h3>
+                            <p class="text-sm text-[var(--text-secondary)] mb-4">Egresada 2019 | Especialista en Ciberseguridad, Banco Central</p>
+                            <!-- FIN: ESPACIO PARA NOMBRE Y PUESTO REALES -->
+
+                            <!-- INICIO: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                            <p class="text-base italic text-[var(--text-primary)]">"La preparación en seguridad informática fue excepcional. Cada día aplico esos conocimientos para proteger la información crítica. ¡Una carrera con un impacto real!"</p>
+                            <!-- FIN: ESPACIO PARA TESTIMONIO/CITA REAL -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- NUEVA SECCIÓN: Llamada a la Acción (CTA) para involucrarse -->
+            <section class="bg-white pb-24 pt-12">
+                <div class="mx-auto max-w-4xl px-4 text-center">
+                    <h2 class="text-4xl font-bold tracking-tight text-[var(--secondary-color)]">¡Sé Parte Activa de Nuestra Comunidad!</h2>
+                    <!-- MODIFICADO: Añadida frase sobre la participación pasada de egresados -->
+                    <p class="mt-4 text-lg text-[var(--text-secondary)]">
+                        Te invitamos a mantenerte conectado con tu alma máter y a contribuir al crecimiento de las futuras generaciones de ingenieros en sistemas. **Muchos de nuestros egresados ya han regresado para compartir su experiencia y conocimiento en conferencias y talleres.** Hay muchas formas de involucrarte:
+                    </p>
+                    <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-[var(--accent-color)] p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-[var(--primary-color)] text-lg mb-2">Programa de Mentoría</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Ofrece guía y comparte tu experiencia profesional con estudiantes actuales.</p>
+                        </div>
+                        <div class="bg-[var(--accent-color)] p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-[var(--primary-color)] text-lg mb-2">Charlas y Talleres</h3>
+                            <!-- MODIFICADO: Texto más invitacional y explícito -->
+                            <p class="text-sm text-[var(--text-secondary)]">Comparte tus conocimientos, habilidades y experiencias laborales en conferencias, talleres prácticos o paneles de discusión para enriquecer a nuestros estudiantes.</p>
+                        </div>
+                        <div class="bg-[var(--accent-color)] p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-[var(--primary-color)] text-lg mb-2">Proyectos Colaborativos</h3>
+                            <p class="text-sm text-[var(--text-secondary)]">Participa en proyectos de investigación o desarrollo en conjunto con el departamento.</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="contacto.html" class="inline-flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-full bg-[var(--primary-color)] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105">
+                            <span class="truncate">¡Quiero Participar!</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-[var(--secondary-color)] text-white">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div>
+                </div>
+                <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                    <p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p>
+                    <p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    const toggleMenu = () => { mobileMenu.classList.toggle('hidden'); menuIconOpen.classList.toggle('hidden'); menuIconClose.classList.toggle('hidden'); };
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => { link.addEventListener('click', () => { if (!mobileMenu.classList.contains('hidden')) { toggleMenu(); } }); });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <!-- TÍTULO Y DESCRIPCIÓN ACTUALIZADOS -->
+    <title>Gestión de Proyectos de Software (SCG-1009) - ITCM</title> 
+    <meta name="description" content="Temario y detalles de la materia Gestión de Proyectos de Software (SCG-1009) del plan de estudios de Ingeniería en Sistemas Computacionales del ITCM.">
+
+    <!-- ESTILOS Y FUENTES (Se mantienen igual) -->
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body { font-family: "Work Sans", sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        #temario-container ul ul { list-style-type: '- '; }
+    </style>
+</head>
+<body class="bg-gray-50 text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+        
+        <!-- HEADER Y NAVEGACIÓN -->
+        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+            <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+            <div class="flex items-center gap-4">
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                </nav>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+                <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            </div>
+        </header>
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+            <nav class="flex flex-col items-center justify-center h-full gap-8">
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+            </nav>
+        </div>
+        
+        <main class="flex-1 px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mx-auto max-w-5xl">
+
+                <div class="bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                     <div class="mb-10 text-center">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-[var(--secondary-color)] sm:text-5xl">Gestión de Proyectos de Software</h1>
+                        <p class="mt-4 text-lg text-gray-500">Clave: SCG-1009 | Créditos SATCA: 3-3-6</p>
+                    </div>
+
+                    <div class="space-y-12">
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Caracterización de la Asignatura</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Esta asignatura proporciona al estudiante los conceptos que requiere para la gestión de un proyecto de software y le da la posibilidad de poner en práctica dicha gestión. Se sugiere que el estudiante desarrolle un proyecto de gestión para una organización, adquiriendo las competencias necesarias para estar al frente de dichos proyectos.
+                            </p>
+                            <p class="mt-4 text-lg text-gray-600 leading-relaxed">
+                                La intención es que los estudiantes gestionen un proyecto de software de carácter multidisciplinario para trabajar las competencias genéricas de su formación profesional. Se relaciona con asignaturas previas como Taller de Administración e Ingeniería de Software, y sirve de base para asignaturas posteriores.
+                            </p>
+                        </section>
+                        
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Competencia General de la Asignatura</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-[var(--primary-color)] mr-3 mt-1">fact_check</span>
+                                    <span class="text-lg text-gray-700">Aplica metodologías e instrumentos para garantizar la gestión adecuada de un proyecto de software.</span>
+                                </li>
+                            </ul>
+                        </section>
+                        
+                        <section id="temario-container">
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Temario y Competencias por Unidad</h2>
+                            <div class="space-y-10">
+                                <!-- UNIDAD 1 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">1. Introducción a la gestión de proyectos</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Conoce y comprende el entorno de la gestión de proyectos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>1.1 Conceptos básicos para la gestión de proyectos.</li>
+                                        <li>1.2 Fases de la gestión de proyectos.</li>
+                                        <li>1.3 Fundamentos de Project Management Institute.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 2 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">2. Gestión de calidad</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Identifica y selecciona estándares y métricas de calidad para ser aplicados a un proyecto de software.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>2.1 Plan de calidad del software.</li>
+                                        <li>2.2 La gestión de proyectos usando un marco de calidad.</li>
+                                        <li>2.3 Estándares y Métricas de calidad (CMMI, MoProSoft).</li>
+                                        <li>2.4 Impacto de la calidad en tiempo, costo y alcance.</li>
+                                        <li>2.5 Control del cambio.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 3 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">3. Planificación del proyecto</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Planifica un proyecto de software utilizando una metodología de trabajo para determinar su viabilidad.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>3.1 Objetivo del proyecto.</li>
+                                        <li>3.2 Estimaciones de tiempo, costos y personal.</li>
+                                        <li>3.3 Análisis de riesgos.</li>
+                                        <li>3.4 Análisis de la viabilidad del proyecto.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 4 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">4. Presentación de la información</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Identifica y selecciona propuestas de proyecto de software para la presentación de un contrato al cliente.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>4.1 Propuesta.</li>
+                                        <li>4.2 Lineamientos de comunicación y seguimiento.</li>
+                                        <li>4.3 Contrato.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 5 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">5. Supervisión y Revisión del proyecto</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Aplica políticas de comunicación y seguimiento para la mejora del proyecto de software.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>5.1 Administración de actividades.</li>
+                                        <li>5.2 Administración del tiempo.</li>
+                                        <li>5.3 Evaluación y ajustes del proyecto.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <div class="pt-6 border-t">
+                             <section>
+                                <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] mb-6">Software y Herramientas Propuestos</h2>
+                                <p class="text-lg text-gray-700">Para la gestión y planificación de proyectos de software, se recomienda el uso de herramientas especializadas que facilitan el seguimiento y la colaboración.</p>
+                                <ul class="mt-4 space-y-3 list-disc list-inside text-gray-600">
+                                    <li>Software de gestión de proyectos como Microsoft Project, Jira, Trello, o Asana.</li>
+                                    <li>Herramientas CASE para el modelado y la documentación del proyecto.</li>
+                                    <li>Sistemas de control de versiones como Git para la gestión de artefactos del software.</li>
+                                    <li>Software de ofimática para la elaboración de reportes, propuestas y presentaciones.</li>
+                                </ul>
+                            </section>
+                        </div>
+
+                        <div class="pt-6 border-t">
+                            <section>
+                                <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] mb-6">Fuentes de Información Sugeridas</h2>
+                                <p class="text-lg text-gray-700 mb-4">Textos recomendados para esta asignatura:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-600">
+                                    <li>Pressman, R. S. (2010). Ingeniería del Software un enfoque práctico. MC Graw-Hill.</li>
+                                    <li>Sommerville, I. (2011). Ingeniería de Software. Pearson Addison Wesley.</li>
+                                    <li>Wisocki, R. K. (2009). Effective Project Management. Wiley Publishing, Inc.</li>
+                                    <li>Piattini M.G. (2007). Calidad de Sistemas Informáticos. Alfaomega.</li>
+                                    <li>SEI. (2010). CMMI® para Desarrollo, Versión 1.3. Editorial Universitaria Ramón Areces.</li>
+                                    <li>Oktaba, H. (2003). Modelo de Procesos para la Industria de Software (MoProSoft). Secretaría de economía.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER Y SCRIPTS -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12">
+            <a href="../plan-de-estudios.html" class="inline-block bg-[var(--primary-color)] text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--secondary-color)] transition-all duration-300 transform hover:-translate-y-1">
+                <span class="material-symbols-outlined align-middle mr-2">arrow_back_ios</span>
+                Volver al Plan de Estudios
+            </a>
+        </div>
+        <footer class="bg-[var(--secondary-color)] text-white mt-auto">
+            <div class="container mx-auto px-4 py-12"><div class="grid grid-cols-1 gap-8 md:grid-cols-3"><div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div><div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="../contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div><div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div></div><div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400"><p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p><p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p></div></div>
+        </footer>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

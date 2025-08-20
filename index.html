@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Ingeniería en Sistemas Computacionales - ITCM</title>
+    <!-- NUEVA: Meta descripción para SEO -->
+    <meta name="description" content="Descubre la carrera de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Ciudad Madero. Forma el futuro con un plan de estudios de vanguardia y tecnología de punta.">
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+<!-- PEGAR EN: index.html -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+    <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+    <div class="flex items-center gap-4">
+        <nav class="hidden items-center gap-8 md:flex">
+            <a class="text-sm font-bold text-[var(--primary-color)]" href="index.html">Inicio</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        </nav>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+        <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+    <nav class="flex flex-col items-center justify-center h-full gap-8">
+        <a class="text-2xl font-bold text-[var(--primary-color)]" href="index.html">Inicio</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+    </nav>
+</div>
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-1">
+            <section class="relative flex min-h-[60vh] items-center justify-center bg-cover bg-center py-20 text-white md:min-h-[80vh]" style='background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://www.cdmadero.tecnm.mx/images/galerias/laboratorios/computo/lab%20computo%2018.jpg");'>
+                <div class="container mx-auto px-4 text-center">
+                    <!-- MODIFICADO: Tamaño del h1 y p para mayor impacto -->
+                    <h1 class="text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl lg:text-7xl">Forja el Futuro con Ingeniería en Sistemas Computacionales</h1>
+                    <p class="mx-auto mt-4 max-w-3xl text-lg text-gray-200 md:text-xl lg:text-2xl">Únete a un programa dinámico en el Instituto Tecnológico de Ciudad Madero, donde la innovación se encuentra con la aplicación práctica.</p>
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <a href="plan-de-estudios.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-6 py-3 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"><span class="truncate">Explora el Programa</span></a>
+                        <a href="contacto.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md border border-white bg-transparent px-6 py-3 text-base font-bold text-white shadow-lg transition-all hover:bg-white hover:text-[var(--primary-color)]"><span class="truncate">Contáctanos</span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 sm:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="mx-auto max-w-3xl text-center"><h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">¿Por qué Elegir Nuestro Programa?</h2><p class="mt-4 text-lg text-[var(--text-secondary)]">Nuestro programa de Ingeniería en Sistemas Computacionales se distingue por su enfoque integral, combinando conocimiento teórico con experiencia práctica.</p></div>
+                    <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
+                        <div class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2"><div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3ZM176,128.5l40.62-33.85a8,8,0,1,1,10.24,12.29l-48,40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"></path></svg></div><h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Plan de Estudios de Vanguardia</h3><!-- MODIFICADO: Descripción más específica -->
+                        <p class="mt-2 text-sm text-[var(--text-secondary)]">Mantente a la cabeza con un currículo que evoluciona con las últimas tendencias de la industria, como la Inteligencia Artificial, Tecnologias Web, Big Data etc. Nuestros planes se actualiza constantemente para prepararte para el futuro.</p></div>
+                        <div class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2"><div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z"></path></svg></div><h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Instalaciones de Última Generación</h3><!-- MODIFICADO: Descripción más específica -->
+                        <p class="mt-2 text-sm text-[var(--text-secondary)]">Aprende en laboratorios modernos equipados con software especializado, hardware de alto rendimiento y herramientas de desarrollo avanzadas, proporcionando un entorno de aprendizaje inmersivo y práctico.</p></div>
+                        <div class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2"><div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px" xmlns="http://www.w3.org/2000/svg"><path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"></path></svg></div><h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Proyectos Enfocados en la Industria</h3><!-- MODIFICADO: Descripción más específica -->
+                        <p class="mt-2 text-sm text-[var(--text-secondary)]">Participa en proyectos del mundo real y colabora con empresas líderes, lo que te desafiará a aplicar tus habilidades en escenarios concretos y te preparará para las demandas del mundo profesional.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- NUEVA SECCIÓN: Testimonios -->
+            <section class="py-20 sm:py-24 bg-[var(--background-color)]">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">La Experiencia de Nuestros Alumnos</h2>
+                    <div class="mt-12 grid gap-8 md:grid-cols-2">
+                        <!-- TESTIMONIO 1: Espacio para contenido real -->
+                        <div class="bg-[var(--accent-color)] p-8 rounded-lg shadow-md">
+                            <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO/ALUMNO -->
+                            <img src="https://i.pravatar.cc/150?img=3" alt="Foto de Estudiante de ISC" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <!-- FIN: ESPACIO PARA FOTO REAL -->
+
+                            <p class="text-lg italic text-[var(--text-primary)]">"El enfoque práctico de las materias y el apoyo constante de los profesores fueron fundamentales. Aquí no solo aprendes teoría, ¡creamos el futuro!"</p>
+                            
+                            <!-- INICIO: ESPACIO PARA NOMBRE Y DATOS REALES -->
+                            <p class="mt-4 font-semibold text-[var(--primary-color)]">- Mario A. Kempes, Egresado 2019, Proyect Manager</p>
+                            <!-- FIN: ESPACIO PARA NOMBRE Y DATOS REALES -->
+                        </div>
+                        <!-- TESTIMONIO 2: Espacio para contenido real -->
+                        <div class="bg-[var(--accent-color)] p-8 rounded-lg shadow-md">
+                            <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO/ALUMNO -->
+                            <img src="https://i.pravatar.cc/150?img=68" alt="Foto de Egresado de ISC" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                            <!-- FIN: ESPACIO PARA FOTO REAL -->
+
+                            <p class="text-lg italic text-[var(--text-primary)]">"Gracias a la formación en el ITCM, pude incorporarme rápidamente a la industria. Las especialidades son muy relevantes y me abrieron muchas puertas."</p>
+                            
+                            <!-- INICIO: ESPACIO PARA NOMBRE Y DATOS REALES -->
+                            <p class="mt-4 font-semibold text-[var(--primary-color)]">- Ricardo M. Garza, Egresado 2022, Desarrollador de Software</p>
+                            <!-- FIN: ESPACIO PARA NOMBRE Y DATOS REALES -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="bg-[var(--accent-color)] py-20 sm:py-24">
+                <div class="container mx-auto px-4">
+                    <div class="grid items-center gap-12 lg:grid-cols-2">
+                        <div><h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">Nuestra Misión y Visión</h2><p class="mt-4 text-lg text-[var(--text-secondary)]">Nuestra misión es cultivar la próxima generación de líderes tecnológicos proporcionando una educación rigurosa y relevante en ingeniería de sistemas computacionales.</p><p class="mt-4 text-lg text-[var(--text-secondary)]">Visualizamos a nuestros graduados como innovadores que impulsan los avances tecnológicos y contribuyen a un mundo conectado e inteligente.</p></div>
+                        <div class="h-64 rounded-lg bg-cover bg-center shadow-lg lg:h-96" style="background-image: url('https://www.cdmadero.tecnm.mx/images/noticias/2024/agosto/semicon5.jpg')"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 sm:py-24">
+                <div class="container mx-auto px-4 text-center">
+                    <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">¿Listo para Empezar tu Viaje?</h2>
+                    <p class="mx-auto mt-4 max-w-2xl text-lg text-[var(--text-secondary)]">Descubre cómo nuestro programa puede ayudarte a alcanzar tus aspiraciones profesionales en la industria tecnológica.</p>
+                    <div class="mt-8">
+                        <!-- MODIFICADO: CTA para ser más claro sobre las opciones -->
+                        <a href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer" class="inline-flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105 mx-2">
+                            <span class="truncate">Inicia tu Admisión</span>
+                        </a>
+                        <a href="contacto.html" class="inline-flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-md border border-[var(--primary-color)] bg-transparent px-8 py-4 text-base font-bold text-[var(--primary-color)] shadow-lg transition-all hover:bg-[var(--primary-color)] hover:text-white mx-2">
+                            <span class="truncate">Contáctanos</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="bg-[var(--secondary-color)] text-white">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div>
+                </div>
+                <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                    <p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p>
+                    <p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    const toggleMenu = () => { mobileMenu.classList.toggle('hidden'); menuIconOpen.classList.toggle('hidden'); menuIconClose.classList.toggle('hidden'); };
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => { link.addEventListener('click', () => { if (!mobileMenu.classList.contains('hidden')) { toggleMenu(); } }); });
+});
+</script>
+</body>
+</html>

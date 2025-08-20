@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale-1.0" name="viewport"/>
+    <title>Fundamentos de Telecomunicaciones (AEC-1034) - ITCM</title> 
+    <meta name="description" content="Temario y detalles de la materia Fundamentos de Telecomunicaciones (AEC-1034) del plan de estudios de Ingeniería en Sistemas Computacionales del ITCM.">
+
+    <!-- ESTILOS Y FUENTES -->
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body { font-family: "Work Sans", sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+        /* Regla para cambiar el marcador de las listas anidadas a un guion */
+        #temario-container ul ul {
+            list-style-type: '- ';
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+        
+        <!-- HEADER Y NAVEGACIÓN -->
+        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+            <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+            <div class="flex items-center gap-4">
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                </nav>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+                <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            </div>
+        </header>
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+            <nav class="flex flex-col items-center justify-center h-full gap-8">
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+            </nav>
+        </div>
+        
+        <main class="flex-1 px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mx-auto max-w-5xl">
+                <div class="bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                     <div class="mb-10 text-center">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-[var(--secondary-color)] sm:text-5xl">Fundamentos de Telecomunicaciones</h1>
+                        <p class="mt-4 text-lg text-gray-500">Clave: AEC-1034 | Créditos SATCA: 2-2-4</p>
+                    </div>
+
+                    <div class="space-y-12">
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Caracterización de la Asignatura</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Esta asignatura aporta al perfil del egresado la capacidad de identificar y analizar los elementos de un sistema de comunicación para el diseño eficiente de redes. Se estudian temas como codificación, tipos de medios de transmisión, técnicas de modulación, conmutación y multiplexación. Para cursarla, se requiere de los fundamentos de electrónica básica y aporta conocimientos y habilidades esenciales para el área de Redes de Computadoras.
+                            </p>
+                        </section>
+                        
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Competencia General de la Asignatura</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-[var(--primary-color)] mr-3 mt-1">hub</span>
+                                    <span class="text-lg text-gray-700">Analiza los componentes y la funcionalidad de diferentes sistemas de comunicación para evaluar las tecnologías utilizadas actualmente como parte de la solución de un proyecto de conectividad.</span>
+                                </li>
+                            </ul>
+                        </section>
+                        
+                        <section id="temario-container">
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Temario y Competencias por Unidad</h2>
+                            <div class="space-y-10">
+                                <!-- UNIDAD 1 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">1. Sistema de comunicación</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Conoce y analiza conceptos fundamentales de las telecomunicaciones para evaluar sistemas de comunicación.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>1.1. Impacto de las Telecomunicaciones.</li>
+                                        <li>1.2. Componentes: Emisor, Receptor, Medios
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>1.2.1 Códigos y Protocolos.</li>
+                                            </ul>
+                                        </li>
+                                        <li>1.3. Señales y clasificación.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>1.3.1 Analógicas, digitales, eléctricas y ópticas.</li>
+                                            </ul>
+                                        </li>
+                                        <li>1.4. Modelo matemático de una señal.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>1.4.1 Serie de Fourier.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 2 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">2. Medios de transmisión</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Comprende y selecciona los medios de transmisión adecuados para aplicarlos en diferentes escenarios de comunicación de datos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>2.1 Guiados.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>2.1.1 Par trenzado, coaxial y fibra óptica.</li>
+                                            </ul>
+                                        </li>
+                                        <li>2.2 No guiados.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>2.2.1 Radiofrecuencia, microondas, satélite e infrarrojo.</li>
+                                            </ul>
+                                        </li>
+                                        <li>2.3 Métodos para la detección y corrección de errores.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>2.3.1 Verificación de redundancia vertical (VRC), longitudinal (LRC) y cíclica (CRC).</li>
+                                            </ul>
+                                        </li>
+                                        <li>2.4 Control de flujo.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>2.4.1 Tipos: asentimiento, ventanas deslizantes. Por hardware o software, de lazo abierto o cerrado.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 3 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">3. Modulación</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Analiza y aplica las diferentes técnicas de modulación para evaluar su efecto en el proceso de transmisión de datos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>3.1 Técnicas de modulación analógica.</li>
+                                        <li>3.2 Técnicas de modulación digital.</li>
+                                        <li>3.3 Conversión analógico – digital.</li>
+                                        <li>3.4 Códigos de línea.</li>
+                                        <li>3.5 Modem, estándares y protocolos.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 4 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">4. Técnicas de conmutación y multiplexación</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Analiza las diferentes técnicas de conmutación y multiplexación para evaluar su efecto en el proceso de transmisión de datos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>4.1 Conmutación.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>4.1.1 Conmutación de Circuitos (Red telefónica pública).</li>
+                                                <li>4.1.2 Conmutación de Paquetes (X.25, Frame Relay).</li>
+                                                <li>4.1.3 Entramado: Store and Forward.</li>
+                                                <li>4.1.4 Celdas: ATM.</li>
+                                            </ul>
+                                        </li>
+                                        <li>4.2 Multiplexación.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>4.2.1 TDM División de tiempo.</li>
+                                                <li>4.2.2 FDM División de frecuencia.</li>
+                                                <li>4.2.3 WDM División de longitud de onda.</li>
+                                                <li>4.2.4 CDM División de código.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 5 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">5. Modelos y dispositivos de comunicación</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Conoce la arquitectura OSI y TCP/IP, así como los componentes y funcionalidad de los dispositivos de comunicación para evaluar su desempeño.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>5.1 Introducción al modelo de referencia OSI.</li>
+                                        <li>5.2 Protocolos y estándares.</li>
+                                        <li>5.3 Características funcionales de los dispositivos.</li>
+                                        <li>5.4 Estándares de interfaces.</li>
+                                        <li>5.5 Mecanismos de detección y corrección de errores.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <div class="pt-6 border-t">
+                            <section>
+                                <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] mb-6">Fuentes de Información y Material de Apoyo</h2>
+                                <p class="text-lg text-gray-700 mb-4">Textos recomendados:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-600">
+                                    <li>Behrouz, F. (2007). Transmisión de Datos y Redes de Comunicaciones (Cuarta ed.). Mc Graw Hill.</li>
+                                    <li>Halsall, Fred. (1998). Comunicación de Datos, Redes de Computadores y Sistemas Abiertos. Alhambra Mexicana.</li>
+                                    <li>Huidoboro, J. (2010). Telecomunicaciones: Tecnologías, Redes y Servicios (Primera ed.). Rama.</li>
+                                    <li>Olifer, N. (2009). Redes de Computadoras (Primera ed.). Mc.Graw-Hill.</li>
+                                    <li>Stallings, William. (2004). Comunicaciones y Redes de Computadoras. Prentice-Hall.</li>
+                                    <li>Tanenbaum, A. S. (2011). Redes de Computadoras (Quinta ed.). Pearson.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER Y SCRIPTS -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12">
+            <a href="../plan-de-estudios.html" class="inline-block bg-[var(--primary-color)] text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--secondary-color)] transition-all duration-300 transform hover:-translate-y-1">
+                <span class="material-symbols-outlined align-middle mr-2">arrow_back_ios</span>
+                Volver al Plan de Estudios
+            </a>
+        </div>
+        <footer class="bg-[var(--secondary-color)] text-white mt-auto">
+            <div class="container mx-auto px-4 py-12"><div class="grid grid-cols-1 gap-8 md:grid-cols-3"><div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div><div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="../contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div><div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div></div><div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400"><p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p><p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p></div></div>
+        </footer>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>

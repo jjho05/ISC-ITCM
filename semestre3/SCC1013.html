@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Investigación de Operaciones (SCC-1013) - ITCM</title> 
+    <meta name="description" content="Temario y detalles de la materia Investigación de Operaciones (SCC-1013) del plan de estudios de Ingeniería en Sistemas Computacionales del ITCM.">
+
+    <!-- ESTILOS Y FUENTES -->
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body { font-family: "Work Sans", sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+
+        /* Regla para cambiar el marcador de las listas anidadas a un guion */
+        #temario-container ul ul {
+            list-style-type: '- ';
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+        
+        <!-- HEADER Y NAVEGACIÓN -->
+        <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+            <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+            <div class="flex items-center gap-4">
+                <nav class="hidden items-center gap-8 md:flex">
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                    <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                </nav>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+                <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+            </div>
+        </header>
+        <div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+            <nav class="flex flex-col items-center justify-center h-full gap-8">
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../index.html">Inicio</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../nosotros.html">Nosotros</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../plan-de-estudios.html">Plan de Estudios</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../perfil-aspirante.html">Perfil Aspirante</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../contacto.html">Contacto</a>
+                <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="../egresados.html">Egresados</a>
+                <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+            </nav>
+        </div>
+        
+        <main class="flex-1 px-4 sm:px-6 lg:px-8 py-12">
+            <div class="mx-auto max-w-5xl">
+                <div class="bg-white shadow-lg rounded-2xl p-8 md:p-12">
+                     <div class="mb-10 text-center">
+                        <h1 class="text-4xl font-extrabold tracking-tight text-[var(--secondary-color)] sm:text-5xl">Investigación de Operaciones</h1>
+                        <p class="mt-4 text-lg text-gray-500">Clave: SCC-1013 | Créditos SATCA: 2-2-4</p>
+                    </div>
+
+                    <div class="space-y-12">
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Caracterización de la Asignatura</h2>
+                            <p class="text-lg text-gray-600 leading-relaxed">
+                                Esta asignatura aporta al perfil del Ingeniero en Sistemas Computacionales la capacidad para aplicar técnicas y modelos de investigación de operaciones en la solución de problemas, utilizando o desarrollando herramientas de software para la toma de decisiones. El conocer y comprender las técnicas para la modelación de sistemas es importante en la formación de la lógica de solución de problemas, permitiendo recopilar, clasificar y ordenar información del sistema a modelar para analizarlo y obtener la mejor solución.
+                            </p>
+                        </section>
+                        
+                        <section>
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Competencia General de la Asignatura</h2>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <span class="material-symbols-outlined text-[var(--primary-color)] mr-3 mt-1">hub</span>
+                                    <span class="text-lg text-gray-700">Formula soluciones óptimas para generar una mejor alternativa para la toma de decisiones aplicando conceptos de los modelos matemáticos, técnicas y algoritmos.</span>
+                                </li>
+                            </ul>
+                        </section>
+                        
+                        <section id="temario-container">
+                            <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] border-b pb-4 mb-6">Temario y Competencias por Unidad</h2>
+                            <div class="space-y-10">
+                                <!-- UNIDAD 1 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">1. Programación Lineal</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Resuelve problemas de programación lineal para generar la solución óptima aplicando el uso de conceptos, técnicas y algoritmos del método simplex.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>1.1 Definición, desarrollo y tipos de modelos de investigación de operaciones.</li>
+                                        <li>1.2 Formulación de modelos.</li>
+                                        <li>1.3 Problemas por método gráfico.</li>
+                                        <li>1.4 Problemas por el método simplex.</li>
+                                        <li>1.5 Aplicaciones diversas de programación lineal</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 2 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">2. Análisis de Redes</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Aplica los métodos de solución de problemas de redes y de administración de proyectos para tomar la mejor decisión, aplicando los modelos y técnicas correspondientes.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>2.1 Conceptos Básicos.</li>
+                                        <li>2.2 Problema de transporte.</li>
+                                        <li>2.3 Problema de asignación.</li>
+                                        <li>2.4 Problema de la ruta más corta.</li>
+                                        <li>2.5 Programación de proyectos (PERT-CPM).</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 3 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">3. Programación no lineal</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Resuelve problemas propuestos para encontrar máximos y mínimos de los problemas no lineales restringidos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>3.1 Conceptos básicos de problemas de programación no lineal.</li>
+                                        <li>3.2 Ilustración grafica de problemas de programación no lineal.</li>
+                                        <li>3.3 Tipos de problemas de programación no lineal.</li>
+                                        <li>3.4 Optimización clásica
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>3.4.1 Puntos de inflexión</li>
+                                                <li>3.4.2 Máximos y mínimos</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 4 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">4. Teoría de inventarios</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Resuelve problemas de manejo de inventarios con el objeto de equilibrar los costos de conservación, preparación y déficit empleando los modelos determinísticos.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>4.1 Sistemas de administración y control.</li>
+                                        <li>4.2 Modelos determinísticos.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>4.2.1 Lotes económicos sin déficit.</li>
+                                                <li>4.2.2 Lotes económicos con déficit.</li>
+                                            </ul>
+                                        </li>
+                                        <li>4.3 Lote económico de producción.</li>
+                                    </ul>
+                                </div>
+                                <!-- UNIDAD 5 -->
+                                <div>
+                                    <h3 class="text-xl font-semibold text-gray-800">5. Líneas de Espera</h3>
+                                    <p class="mt-2 text-md text-gray-600 bg-gray-50 p-3 rounded-lg border-l-4 border-[var(--primary-color)]">
+                                        <strong>Competencia:</strong> Utiliza los modelos de líneas de espera para identificar, representar y analizar los diferentes tipos de sistemas y sus costos asociados.
+                                    </p>
+                                    <ul class="mt-4 ml-4 space-y-2 list-disc list-inside text-gray-600">
+                                        <li>5.1 Definiciones, características y suposiciones</li>
+                                        <li>5.2 Terminología y notación.</li>
+                                        <li>5.3 Proceso de nacimiento o muerte.</li>
+                                        <li>5.4 Modelos Poisson.
+                                            <ul class="mt-2 ml-5 space-y-2 list-inside">
+                                                <li>5.4.1 Un servidor.</li>
+                                                <li>5.4.2 Múltiples servidores.</li>
+                                            </ul>
+                                        </li>
+                                        <li>5.5 Análisis de costos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <div class="pt-6 border-t">
+                            <section>
+                                <h2 class="text-2xl font-bold tracking-tight text-[var(--secondary-color)] mb-6">Fuentes de Información y Material de Apoyo</h2>
+                                <p class="text-lg text-gray-700 mb-4">Textos recomendados:</p>
+                                <ul class="space-y-3 list-disc list-inside text-gray-600">
+                                    <li>Hillier, Frederick. (2010). Introducción a la investigación de operaciones. Mc Graw-Hill.</li>
+                                    <li>Taha, Hamdy A. (2011). Investigación de operaciones. (9 Ed.). México: Pearson.</li>
+                                    <li>Winston, Wayne L. (2004). Investigación de operaciones aplicaciones y algoritmos. (4ª Ed.). México: Cengage Learning.</li>
+                                    <li>Kamlesh Mathur. Investigación de operaciones. Pearson.</li>
+                                    <li>Rios Insua, S., Mateos Caballero, A., Martin Jiménez, J. (2006) Problemas de investigación operativa, Ra-MA.</li>
+                                    <li>Izunza, V. (2012). Investigación de operaciones. N.Y, Estados unidos: Pearson Educación.</li>
+                                </ul>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER Y SCRIPTS -->
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center pb-12">
+            <a href="../plan-de-estudios.html" class="inline-block bg-[var(--primary-color)] text-white font-bold py-3 px-8 rounded-lg shadow-md hover:bg-[var(--secondary-color)] transition-all duration-300 transform hover:-translate-y-1">
+                <span class="material-symbols-outlined align-middle mr-2">arrow_back_ios</span>
+                Volver al Plan de Estudios
+            </a>
+        </div>
+        <footer class="bg-[var(--secondary-color)] text-white mt-auto">
+            <div class="container mx-auto px-4 py-12"><div class="grid grid-cols-1 gap-8 md:grid-cols-3"><div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div><div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="../contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div><div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div></div><div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400"><p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p><p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p></div></div>
+        </footer>
+    </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    
+    const toggleMenu = () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIconOpen.classList.toggle('hidden');
+        menuIconClose.classList.toggle('hidden');
+        if (mobileMenu.classList.contains('hidden')) {
+            document.body.style.overflow = 'auto';
+        } else {
+            document.body.style.overflow = 'hidden';
+        }
+    };
+
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                toggleMenu();
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html>
