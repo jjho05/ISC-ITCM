@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contacto - ITCM</title>
+    <meta name="description" content="Ponte en contacto con la carrera de Ingeniería en Sistemas Computacionales del ITCM. Encuentra nuestro teléfono, correo electrónico, ubicación y horario de atención.">
+    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary-color: #1978e5;
+            --secondary-color: #0d3b66;
+            --accent-color: #f0f2f4;
+            --text-primary: #111418;
+            --text-secondary: #637488;
+            --background-color: #ffffff;
+            --border-color: #dce0e5;
+        }
+        body {
+            font-family: "Work Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[var(--background-color)] text-[var(--text-primary)]">
+<div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
+    <div class="flex h-full grow flex-col">
+
+<!-- HEADER Y MENÚ MÓVIL (Código original sin cambios) -->
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+    <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">Ingeniería en <br class="hidden sm:block"/>Sistemas Computacionales</h2></a>
+    <div class="flex items-center gap-4">
+        <nav class="hidden items-center gap-8 md:flex">
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="index.html">Inicio</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo Estudiantil</a>
+            <a class="text-sm font-bold text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        </nav>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="hidden md:block transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-12 w-auto"></a>
+        <div class="md:hidden"><button id="menu-btn" type="button" class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button></div>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+    <nav class="flex flex-col items-center justify-center h-full gap-8">
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="index.html">Inicio</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="nosotros.html">Nosotros</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="plan-de-estudios.html">Plan de Estudios</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="perfil-aspirante.html">Perfil Aspirante</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo Estudiantil</a>
+        <a class="text-2xl font-bold text-[var(--primary-color)]" href="contacto.html">Contacto</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]" href="egresados.html">Egresados</a>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer" class="mt-8 transition-transform hover:scale-105"><img src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM" class="h-16 w-auto"></a>
+    </nav>
+</div>
+        
+        <!-- CONTENIDO PRINCIPAL -->
+        <main class="flex-grow">
+            <section class="py-16 sm:py-24">
+                <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-16 items-start">
+                        <!-- SECCIÓN DE INFORMACIÓN DE CONTACTO -->
+                        <div class="space-y-8">
+                            <div class="space-y-4"><h1 class="text-3xl sm:text-4xl font-bold tracking-tighter text-[var(--secondary-color)]">Ponte en Contacto</h1><p class="text-lg text-[var(--text-secondary)]">Si tienes alguna pregunta sobre el programa de Ingeniería en Sistemas Computacionales, nuestro plan de estudios, o el proceso de admisión, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte a iniciar tu camino.</p></div>
+                            <div class="space-y-6">
+                                <h2 class="text-2xl font-bold text-[var(--secondary-color)]">Información Directa</h2>
+                                <div class="space-y-4">
+                                    <div class="flex items-start gap-4"><div class="flex-shrink-0 size-8 bg-[var(--primary-color)] text-white rounded-full flex items-center justify-center mt-1"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M222.39,157.83l-48-24a8,8,0,0,0-9.57,1.82l-24.8,32.22c-29.35-15-52.66-38.31-67.65-67.65l32.22-24.8a8,8,0,0,0,1.82-9.57l-24-48A8,8,0,0,0,74.17,16H34.17a8,8,0,0,0-8,8.21A160,160,0,0,0,184,224a8,8,0,0,0,8.21-8V173.83A8,8,0,0,0,222.39,157.83ZM184,208A144.17,144.17,0,0,1,40.22,40H71.26l22.6,45.2-32.55,25a8,8,0,0,0-2.3,10.22,185.74,185.74,0,0,0,76,76,8,8,0,0,0,10.22-2.3l25-32.55,45.2,22.6Z"></path></svg></div><div><p class="font-semibold text-[var(--text-primary)]">Teléfono</p><a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="tel:+528333574820">(833) 357 4820</a></div></div>
+                                    <div class="flex items-start gap-4"><div class="flex-shrink-0 size-8 bg-[var(--primary-color)] text-white rounded-full flex items-center justify-center mt-1"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M224,48H32a8,8,0,0,0-8,8V192a8,8,0,0,0,8,8H224a8,8,0,0,0,8-8V56A8,8,0,0,0,224,48Zm-8,16L128,128,40,64ZM216,192H40V74.19l82.59,55.06a8,8,0,0,0,10.82,0L216,74.19Z"></path></svg></div><div><p class="font-semibold text-[var(--text-primary)]">Correo Electrónico</p><a class="text-[var(--text-secondary)] hover:text-[var(--primary-color)] transition-colors" href="mailto:sistemas@cdmadero.tecnm.mx">sistemas@cdmadero.tecnm.mx</a></div></div>
+                                    <div class="flex items-start gap-4"><div class="flex-shrink-0 size-8 bg-[var(--primary-color)] text-white rounded-full flex items-center justify-center mt-1"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,0,0,24,128c0,70.61,100.1,120.37,101.44,120.93a7.88,7.88,0,0,0,5.12,0C155.9,248.37,232,174.61,232,128A104,104,0,0,0,128,24Zm0,112a36,36,0,1,1,36-36A36,36,0,0,1,128,136Z"></path></svg></div><div><p class="font-semibold text-[var(--text-primary)]">Ubicación</p><p class="text-[var(--text-secondary)]">Av. 1o. de Mayo No. 101 Ote. Col. Centro, Cd. Madero, Tam. México. C.P. 89450</p><a class="text-[var(--primary-color)] hover:underline text-sm mt-1 block" href="https://www.google.com/maps/search/Instituto+Tecnologico+de+Ciudad+Madero" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a></div></div>
+                                    <div class="flex items-start gap-4"><div class="flex-shrink-0 size-8 bg-[var(--primary-color)] text-white rounded-full flex items-center justify-center mt-1"><svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216ZM136,80v48a8,8,0,0,1-4.7,7.31l-32,16a8,8,0,0,1-8.6-13.84L120,120V80a8,8,0,0,1,16,0Z"></path></svg></div><div><p class="font-semibold text-[var(--text-primary)]">Horario de Atención</p><p class="text-[var(--text-secondary)]">Lunes a Viernes: 9:00 AM - 5:00 PM</p></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- FORMULARIO FUNCIONAL CON FORMSUBMIT.CO -->
+                        <div class="bg-white p-8 sm:p-10 rounded-lg shadow-lg border border-[var(--accent-color)]">
+                            <h2 class="text-2xl font-bold text-[var(--secondary-color)] mb-6">Envíanos un Mensaje</h2>
+                            
+                            <!-- 
+                                ¡IMPORTANTE! 
+                                1. Reemplaza 'tu-email@dominio.com' con tu correo electrónico.
+                                2. El 'id="contact-form"' es necesario para que el script funcione.
+                            -->
+                            <form id="contact-form" action="https://formsubmit.co/jjho.reivaj05@gmail.com" method="POST">
+                                <div>
+                                    <label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="name">Nombre Completo</label>
+                                    <input class="form-input block w-full rounded-md border-[var(--border-color)] shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm py-3 px-4" id="name" name="name" placeholder="Ingresa tu nombre" type="text" required/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="email">Correo Electrónico</label>
+                                    <input class="form-input block w-full rounded-md border-[var(--border-color)] shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm py-3 px-4" id="email" name="email" placeholder="Ingresa tu correo electrónico" type="email" required/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="subject">Asunto</label>
+                                    <input class="form-input block w-full rounded-md border-[var(--border-color)] shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm py-3 px-4" id="subject" name="subject" placeholder="¿Cómo podemos ayudarte?" type="text" required/>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-[var(--text-primary)] mb-2" for="message">Mensaje</label>
+                                    <textarea class="form-textarea block w-full rounded-md border-[var(--border-color)] shadow-sm focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)] sm:text-sm py-3 px-4" id="message" name="message" placeholder="Escribe tu mensaje aquí..." rows="4" required></textarea>
+                                </div>
+                                
+                                <!-- Campos de configuración para FormSubmit -->
+                                <!-- 1. Redirige a 'gracias.html' tras el envío -->
+                                <input type="hidden" name="_next" value="gracias.html">
+                                <!-- 2. Deshabilita la página de CAPTCHA de FormSubmit -->
+                                <input type="hidden" name="_captcha" value="false">
+                                <!-- 3. (Opcional) Asunto personalizado para el email que recibes -->
+                                <input type="hidden" name="_subject" value="Nuevo Mensaje de Contacto - Web ISC-ITCM">
+
+                                <div>
+                                    <button id="submit-btn" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--primary-color)] transition-colors duration-300" type="submit">
+                                        Enviar Mensaje
+                                    </button>
+                                </div>
+                                
+                                <!-- Div para mostrar mensajes de estado (errores, etc.) -->
+                                <div id="form-status" class="text-center text-sm mt-4"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- FOOTER (Código original sin cambios) -->
+        <footer class="bg-[var(--secondary-color)] text-white">
+            <div class="container mx-auto px-4 py-12">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                    <div class="col-span-1"><div class="flex items-center gap-3"><svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path></svg><span class="text-lg font-bold">ITCM</span></div><p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Enlaces</h3><ul class="mt-4 space-y-2"><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="contacto.html">Contacto</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank" rel="noopener noreferrer">Admisiones</a></li><li><a class="text-sm text-gray-300 transition-colors hover:text-white" href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank" rel="noopener noreferrer">Calendario Académico</a></li></ul></div>
+                    <div><h3 class="font-semibold uppercase tracking-wider">Síguenos</h3><div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors" href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer" aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"></path></svg></a></div></div>
+                </div>
+                <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+                    <p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p>
+                    <p>Pagina hecha en su totalidad por el alumno: Jesús Javier Hernández Olvera</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- SCRIPT DE JAVASCRIPT PARA MENÚ MÓVIL Y FORMULARIO FUNCIONAL -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // --- Lógica para el menú móvil (código original) ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
+    const navLinks = mobileMenu.querySelectorAll('a');
+    const toggleMenu = () => { mobileMenu.classList.toggle('hidden'); menuIconOpen.classList.toggle('hidden'); menuIconClose.classList.toggle('hidden'); };
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(link => { link.addEventListener('click', () => { if (!mobileMenu.classList.contains('hidden')) { toggleMenu(); } }); });
+
+    // --- Lógica para el formulario de contacto con AJAX ---
+    const form = document.getElementById('contact-form');
+    const statusDiv = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        const data = new FormData(event.target);
+        
+        submitBtn.disabled = true;
+        submitBtn.innerText = 'Enviando...';
+        statusDiv.innerHTML = '';
+
+        try {
+            const response = await fetch(event.target.action, {
+                method: 'POST',
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                // Éxito: Redirige a la página de gracias
+                const nextUrl = form.querySelector('input[name="_next"]').value || 'gracias.html';
+                window.location.href = nextUrl;
+            } else {
+                // Error: Muestra el mensaje de error de FormSubmit
+                const responseData = await response.json();
+                if (responseData.hasOwnProperty('message')) {
+                    statusDiv.innerHTML = `<p class="text-red-600">${responseData.message}</p>`;
+                } else {
+                    statusDiv.innerHTML = `<p class="text-red-600">Hubo un problema al enviar el formulario.</p>`;
+                }
+                submitBtn.disabled = false;
+                submitBtn.innerText = 'Enviar Mensaje';
+            }
+        } catch (error) {
+            // Error de red
+            statusDiv.innerHTML = `<p class="text-red-600">Error de red. Por favor, intenta de nuevo.</p>`;
+            submitBtn.disabled = false;
+            submitBtn.innerText = 'Enviar Mensaje';
+        }
+    }
+
+    form.addEventListener("submit", handleSubmit);
+});
+</script>
+</body>
+</html>
