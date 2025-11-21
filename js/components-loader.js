@@ -22,7 +22,8 @@
     // Cargar un componente
     async function loadComponent(componentName, placeholderId) {
         const basePath = getBasePath();
-        const componentPath = `${basePath}components/${componentName}.html`;
+        // Agregar timestamp para evitar caché del navegador
+        const componentPath = `${basePath}components/${componentName}.html?v=${new Date().getTime()}`;
 
         try {
             const response = await fetch(componentPath);
