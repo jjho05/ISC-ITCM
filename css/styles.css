@@ -1,0 +1,42 @@
+/**
+ * Estilos Globales - ISC-ITCM
+ * Estilos centralizados para el sitio web
+ */
+
+:root {
+    --primary-color: #1978e5;
+    --secondary-color: #0d3b66;
+    --accent-color: #f0f2f4;
+    --text-primary: #111418;
+    --text-secondary: #637488;
+    --background-color: #ffffff;
+    --border-color: #dce0e5;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+}
+
+/* Placeholders para componentes - evita "saltos" durante la carga */
+#header-placeholder {
+    min-height: 80px;
+}
+
+#footer-placeholder {
+    min-height: 200px;
+}
+
+/* Mejora de transiciones para navegación */
+header nav a {
+    transition: color 0.2s ease-in-out;
+}
+
+#mobile-menu a {
+    transition: color 0.2s ease-in-out;
+}
+
+/* Backdrop blur para header sticky */
+header.sticky {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}

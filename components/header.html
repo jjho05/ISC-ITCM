@@ -1,0 +1,72 @@
+<header
+    class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-[var(--accent-color)] bg-white/80 px-4 py-4 sm:px-10">
+    <a href="index.html" class="flex items-center gap-4 transition-opacity hover:opacity-80"><svg
+            class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg">
+            <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor"
+                fill-rule="evenodd"></path>
+        </svg>
+        <h2 class="text-lg sm:text-xl font-bold leading-tight tracking-[-0.015em] text-[var(--secondary-color)]">
+            Ingeniería en <br class="hidden sm:block" />Sistemas Computacionales</h2>
+    </a>
+    <div class="flex items-center gap-4">
+        <nav class="hidden items-center gap-8 md:flex">
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="index.html" data-page="index">Inicio</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="nosotros.html" data-page="nosotros">Nosotros</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="plan-de-estudios.html" data-page="plan-de-estudios">Plan de Estudios</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="perfil-aspirante.html" data-page="perfil-aspirante">Perfil Aspirante</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank"
+                rel="noopener noreferrer">Admisiones</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="contacto.html" data-page="contacto">Contacto</a>
+            <a class="text-sm font-medium text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+                href="egresados.html" data-page="egresados">Egresados</a>
+        </nav>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer"
+            class="hidden md:block transition-transform hover:scale-105"><img
+                src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM"
+                class="h-12 w-auto"></a>
+        <div class="md:hidden"><button id="menu-btn" type="button"
+                class="text-[var(--secondary-color)] transition-transform hover:scale-110 focus:outline-none"><svg
+                    id="menu-icon-open" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg><svg id="menu-icon-close" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg></button></div>
+    </div>
+</header>
+<div id="mobile-menu" class="hidden md:hidden fixed top-[80px] left-0 right-0 bottom-0 bg-white z-40">
+    <nav class="flex flex-col items-center justify-center h-full gap-8">
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="index.html" data-page-mobile="index">Inicio</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="nosotros.html" data-page-mobile="nosotros">Nosotros</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="plan-de-estudios.html" data-page-mobile="plan-de-estudios">Plan de Estudios</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="perfil-aspirante.html" data-page-mobile="perfil-aspirante">Perfil Aspirante</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura" target="_blank"
+            rel="noopener noreferrer">Admisiones</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="https://acm-itcm-com.webnode.mx/" target="_blank" rel="noopener noreferrer">Capítulo ACM</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="contacto.html" data-page-mobile="contacto">Contacto</a>
+        <a class="text-2xl font-bold text-[var(--text-secondary)] transition-colors hover:text-[var(--primary-color)]"
+            href="egresados.html" data-page-mobile="egresados">Egresados</a>
+        <a href="https://www.cdmadero.tecnm.mx/" target="_blank" rel="noopener noreferrer"
+            class="mt-8 transition-transform hover:scale-105"><img
+                src="https://www.cdmadero.tecnm.mx/images/logo-itcm-v2.png" alt="Logo del TecNM"
+                class="h-16 w-auto"></a>
+    </nav>
+</div>
