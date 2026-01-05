@@ -1,45 +1,51 @@
-<footer class="bg-[var(--secondary-color)] text-white">
-    <div class="container mx-auto px-4 py-10">
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div class="col-span-1">
-                <div class="flex items-center gap-3">
-                    <span class="text-lg font-bold">ITCM</span>
-                    <svg class="h-8 w-8 text-[var(--primary-color)]" fill="none" viewBox="0 0 48 48"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
-                            fill="currentColor" fill-rule="evenodd"></path>
-                    </svg>
+<footer class="bg-gradient-to-br from-[#2C3E50] to-[#1a252f] text-white">
+    <div class="container mx-auto px-4 py-10 max-w-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-8">
+            <!-- Logo y descripción -->
+            <div class="text-center md:text-left">
+                <img src="logo-cres.png" alt="Logo CRES"
+                    class="h-16 w-auto mx-auto md:mx-0 mb-4 hover:scale-105 transition-transform">
+                <p class="text-sm text-gray-300 leading-relaxed font-serif">
+                    Comunidad Reformada de Estudios Superiores
+                </p>
+                <div class="mt-4">
+                    <img src="logo-iglesia-presbiteriana.png" alt="Iglesia Presbiteriana"
+                        class="h-12 w-auto mx-auto md:mx-0 opacity-70 hover:opacity-100 transition-opacity">
                 </div>
-                <p class="mt-4 text-sm text-gray-300">Instituto Tecnológico de Ciudad Madero</p>
             </div>
-            <div>
-                <h3 class="font-semibold uppercase tracking-wider">Enlaces</h3>
-                <ul class="mt-4 space-y-2">
-                    <li><a class="text-sm text-gray-300 transition-colors hover:text-white"
+
+            <!-- Enlaces -->
+            <div class="text-center">
+                <h3 class="font-bold text-[var(--secondary-color)] mb-4 text-sm uppercase tracking-widest">Enlaces</h3>
+                <ul class="space-y-2">
+                    <li><a class="text-sm text-gray-300 transition-all hover:text-[var(--secondary-color)] hover:translate-x-1 inline-block"
+                            href="index.html">Inicio</a></li>
+                    <li><a class="text-sm text-gray-300 transition-all hover:text-[var(--secondary-color)] hover:translate-x-1 inline-block"
+                            href="nosotros.html">Nosotros</a></li>
+                    <li><a class="text-sm text-gray-300 transition-all hover:text-[var(--secondary-color)] hover:translate-x-1 inline-block"
+                            href="programas.html">Programas</a></li>
+                    <li><a class="text-sm text-gray-300 transition-all hover:text-[var(--secondary-color)] hover:translate-x-1 inline-block"
+                            href="eventos.html">Eventos</a></li>
+                    <li><a class="text-sm text-gray-300 transition-all hover:text-[var(--secondary-color)] hover:translate-x-1 inline-block"
                             href="contacto.html">Contacto</a></li>
-                    <li><a class="text-sm text-gray-300 transition-colors hover:text-white"
-                            href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura"
-                            target="_blank" rel="noopener noreferrer">Admisiones</a></li>
-                    <li><a class="text-sm text-gray-300 transition-colors hover:text-white"
-                            href="https://www.tecnm.mx/pdf/Calendario_Academico_TecNM_2024_2025.pdf?a=2" target="_blank"
-                            rel="noopener noreferrer">Calendario Académico</a></li>
                 </ul>
             </div>
-            <div>
-                <h3 class="font-semibold uppercase tracking-wider">Síguenos</h3>
-                <div class="flex justify-start gap-4 mt-4"><a class="text-gray-400 hover:text-white transition-colors"
-                        href="https://www.facebook.com/share/1USKGStwow/" target="_blank" rel="noopener noreferrer"
-                        aria-label="Síguenos en Facebook"><svg fill="currentColor" height="24" viewBox="0 0 256 256"
-                            width="24" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
-                            </path>
-                        </svg></a></div>
+
+            <!-- Contacto -->
+            <div class="text-center md:text-right">
+                <h3 class="font-bold text-[var(--secondary-color)] mb-4 text-sm uppercase tracking-widest">Contacto</h3>
+                <ul class="space-y-2 text-sm text-gray-300">
+                    <li class="hover:text-white transition-colors">Tampico, México</li>
+                    <li class="hover:text-white transition-colors">833 127 4030</li>
+                    <li class="text-xs hover:text-white transition-colors break-all">comunidadreformada_cres@hotmail.com
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
-            <p>© Instituto Tecnológico de Ciudad Madero. Todos los derechos reservados.</p>
-            <p>Pagina hecha por el destacado alumno: Jesús Javier Hernández Olvera</p>
+
+        <div class="border-t border-gray-700 pt-6 text-center">
+            <p class="text-xs text-gray-400">© 2026 CRES. Todos los derechos reservados.</p>
+            <p class="text-xs text-gray-500 mt-2">Iglesia Presbiteriana Asociada Reformada de México, A.R.</p>
         </div>
     </div>
 </footer>

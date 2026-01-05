@@ -4,43 +4,58 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Ingeniería en Sistemas Computacionales - ITCM</title>
-    <!-- NUEVA: Meta descripción para SEO -->
+    <title>CRES - Comunidad Reformada de Estudios Superiores</title>
     <meta name="description"
-        content="Descubre la carrera de Ingeniería en Sistemas Computacionales en el Instituto Tecnológico de Ciudad Madero. Forma el futuro con un plan de estudios de vanguardia y tecnología de punta.">
-    <link href="https://www.cdmadero.tecnm.mx/images/favicon.png" rel="icon" type="image/png" />
+        content="CRES - Seminario Teológico de la Iglesia Presbiteriana Asociada Reformada de México. Formación bíblica y teológica reformada para el ministerio.">
+    <link href="logo-cres.png" rel="icon" type="image/png" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <!-- Tipografías Oficiales TecNM -->
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap"
+    <!-- Fuentes elegantes serif para seminario -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <style type="text/tailwindcss">
         :root {
-            /* Colores Oficiales TecNM - Manual de Identidad 2025 */
-            --tecnm-blue: #1B396A;        /* Pantone 294 C - Azul oficial */
-            --tecnm-gray: #807F83;        /* Cool Gray 10 C */
-            --tecnm-black: #000000;       /* Negro 100% */
-            --tecnm-silver: #ABABAB;      /* Pantone 877 C */
+            --cres-burgundy: #8B1A1A;
+            --cres-burgundy-dark: #6B1414;
+            --cres-gold: #C9A961;
+            --cres-gold-dark: #B8984A;
+            --cres-navy: #2C3E50;
+            --cres-navy-dark: #1a252f;
+            --cres-cream: #F8F6F1;
+            --cres-gray: #4A4A4A;
+            --cres-gray-light: #E8E6E1;
             
-            /* Aplicación de colores */
-            --primary-color: #1B396A;     /* Azul oficial TecNM */
-            --secondary-color: #14305C;   /* Azul oscuro complementario */
-            --accent-color: #f0f2f4;      /* Gris claro */
-            --text-primary: #000000;      /* Negro oficial */
-            --text-secondary: #807F83;    /* Gris oficial */
+            --primary-color: var(--cres-burgundy);
+            --secondary-color: var(--cres-gold);
+            --accent-color: var(--cres-navy);
+            --text-primary: #2C3E50;
+            --text-secondary: #5A6C7D;
             --background-color: #ffffff;
-            --border-color: #dce0e5;
+            --background-soft: var(--cres-cream);
+            --border-color: var(--cres-gray-light);
         }
         body {
-            font-family: "Noto Sans", sans-serif;
+            font-family: "Crimson Text", "Georgia", serif;
+            font-size: 18px;
+            line-height: 1.7;
         }
         h1, h2, h3, h4, h5, h6 {
-            font-family: "Montserrat", sans-serif;
+            font-family: "Playfair Display", "Georgia", serif;
             font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .elegant-italic {
+            font-family: "Cormorant Garamond", "Georgia", serif;
+            font-style: italic;
         }
     </style>
 </head>
@@ -50,173 +65,184 @@
         <div class="flex h-full grow flex-col">
             <!-- Header Component -->
             <div id="header-placeholder"></div>
+
             <!-- CONTENIDO PRINCIPAL -->
             <main class="flex-1">
+                <!-- HERO SECTION CON CITA BÍBLICA -->
+                <section class="relative bg-[var(--background-soft)] py-20 text-center">
+                    <div class="container mx-auto px-4 max-w-4xl">
+                        <div class="mb-8 flex justify-center">
+                            <img src="logo-cres.png" alt="Logo CRES" class="h-20 w-auto opacity-90">
+                        </div>
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-5xl font-normal text-[var(--text-primary)] mb-8 leading-relaxed px-4">
+                            "PROCURA CON DILIGENCIA PRESENTARTE A DIOS APROBADO, COMO OBRERO QUE NO TIENE DE QUÉ
+                            AVERGONZARSE, QUE USA BIEN LA PALABRA DE VERDAD."
+                        </h1>
+                        <p class="text-lg text-[var(--secondary-color)] font-semibold tracking-wide">
+                            2 TIMOTEO 2:15
+                        </p>
+                    </div>
+                </section>
+
+                <!-- HERO PRINCIPAL -->
                 <section
-                    class="relative flex min-h-[60vh] items-center justify-center bg-cover bg-center py-20 text-white md:min-h-[80vh]"
-                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url("https://www.cdmadero.tecnm.mx/images/galerias/laboratorios/computo/lab%20computo%2018.jpg");'>
-                    <div class="container mx-auto px-4 text-center">
-                        <!-- MODIFICADO: Tamaño del h1 y p para mayor impacto -->
-                        <h1 class="text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl lg:text-7xl">Forja
-                            el Futuro con Ingeniería en Sistemas Computacionales</h1>
-                        <p class="mx-auto mt-4 max-w-3xl text-lg text-gray-200 md:text-xl lg:text-2xl">Únete a un
-                            programa dinámico en el Instituto Tecnológico de Ciudad Madero, donde la innovación se
-                            encuentra con la aplicación práctica.</p>
-                        <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a href="plan-de-estudios.html"
-                                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-6 py-3 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"><span
-                                    class="truncate">Explora el Programa</span></a>
-                            <a href="contacto.html"
-                                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-md border border-white bg-transparent px-6 py-3 text-base font-bold text-white shadow-lg transition-all hover:bg-white hover:text-[var(--primary-color)]"><span
-                                    class="truncate">Contáctanos</span></a>
+                    class="relative flex min-h-[70vh] items-center justify-start bg-cover bg-center text-[var(--text-primary)]"
+                    style='background-image: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1920"); background-position: right center;'>
+                    <div class="absolute inset-0 bg-white/75"></div>
+                    <div class="container mx-auto px-4 relative z-10 max-w-6xl">
+                        <div class="max-w-xl">
+                            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-[var(--text-primary)]">
+                                FORMACIÓN BÍBLICA PARA UNA VIDA DE MINISTERIO
+                            </h2>
+                            <p class="text-xl md:text-2xl text-[var(--text-secondary)] mb-8 leading-relaxed">
+                                Equipamos pastores, consejeros y líderes ministeriales para una vida de servicio fiel.
+                            </p>
+                            <a href="programas.html"
+                                class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-[var(--secondary-color)] rounded-md shadow-lg transition-all hover:bg-[var(--cres-gold-dark)] uppercase tracking-wide">
+                                Solicitar Información
+                            </a>
                         </div>
                     </div>
                 </section>
-                <section class="py-20 sm:py-24">
-                    <div class="container mx-auto px-4">
-                        <div class="mx-auto max-w-3xl text-center">
-                            <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">¿Por
-                                qué Elegir Nuestro Programa?</h2>
-                            <p class="mt-4 text-lg text-[var(--text-secondary)]">Nuestro programa de Ingeniería en
-                                Sistemas Computacionales se distingue por su enfoque integral, combinando conocimiento
-                                teórico con experiencia práctica.</p>
+
+                <!-- LA EXPERIENCIA CRES -->
+                <section class="py-20 bg-white">
+                    <div class="container mx-auto px-4 max-w-6xl">
+                        <div class="text-center mb-16">
+                            <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4">
+                                LA EXPERIENCIA CRES
+                            </h2>
+                            <p class="text-lg text-[var(--text-secondary)] max-w-3xl mx-auto">
+                                Muchos no perseveran en el ministerio porque se sienten frustrados y mal preparados. En
+                                CRES, nuestra formación integral produce pastores y líderes capaces. El resultado es que
+                                tendrás un impacto duradero mientras la iglesia recibe el liderazgo fiel que merece.
+                            </p>
                         </div>
-                        <div class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-3">
-                            <div
-                                class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2">
-                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg
-                                        fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3ZM176,128.5l40.62-33.85a8,8,0,1,1,10.24,12.29l-48,40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z">
-                                        </path>
-                                    </svg></div>
-                                <h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Plan de Estudios de
-                                    Vanguardia</h3><!-- MODIFICADO: Descripción más específica -->
-                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Mantente a la cabeza con un
-                                    currículo que evoluciona con las últimas tendencias de la industria, como la
-                                    Inteligencia Artificial, Tecnologias Web, Big Data etc. Nuestros planes se actualiza
-                                    constantemente para prepararte para el futuro.</p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                            <!-- Card 1 -->
+                            <div class="relative overflow-hidden rounded-lg shadow-lg group h-80">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-105"
+                                    style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600');">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[var(--accent-color)] via-[var(--accent-color)]/80 to-transparent">
+                                </div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                    <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Fidelidad Bíblica</h3>
+                                    <p class="text-sm leading-relaxed">
+                                        Aprende la Biblia de quienes la aman profundamente. Nuestra facultad está
+                                        comprometida con la enseñanza fiel de las Escrituras.
+                                    </p>
+                                </div>
                             </div>
-                            <div
-                                class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2">
-                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg
-                                        fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8,8,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8,8,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z">
-                                        </path>
-                                    </svg></div>
-                                <h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Instalaciones de
-                                    Última Generación</h3><!-- MODIFICADO: Descripción más específica -->
-                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Aprende en laboratorios modernos
-                                    equipados con software especializado, hardware de alto rendimiento y herramientas de
-                                    desarrollo avanzadas, proporcionando un entorno de aprendizaje inmersivo y práctico.
+
+                            <!-- Card 2 -->
+                            <div class="relative overflow-hidden rounded-lg shadow-lg group h-80">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-105"
+                                    style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600');">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[var(--accent-color)] via-[var(--accent-color)]/80 to-transparent">
+                                </div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                    <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Formación Espiritual</h3>
+                                    <p class="text-sm leading-relaxed">
+                                        Nuestro enfoque integral te ayuda a acercarte a Jesús. Crecerás en profundidad
+                                        emocional y espiritual mientras estudias la Biblia.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="relative overflow-hidden rounded-lg shadow-lg group h-80">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-105"
+                                    style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600');">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[var(--accent-color)] via-[var(--accent-color)]/80 to-transparent">
+                                </div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                    <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Excelencia Pastoral</h3>
+                                    <p class="text-sm leading-relaxed">
+                                        Nuestra facultad no solo son eruditos bíblicos, son pastores que te enseñan cómo
+                                        servir a la Iglesia mientras manejas correctamente la Palabra.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="relative overflow-hidden rounded-lg shadow-lg group h-80">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform group-hover:scale-105"
+                                    style="background-image: url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=600');">
+                                </div>
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-[var(--accent-color)] via-[var(--accent-color)]/80 to-transparent">
+                                </div>
+                                <div class="absolute inset-0 p-6 flex flex-col justify-end text-white">
+                                    <h3 class="text-xl font-bold mb-2 uppercase tracking-wide">Compromiso Cultural</h3>
+                                    <p class="text-sm leading-relaxed">
+                                        Aprende a aplicar el evangelio al mundo que te rodea. Crecerás en tu capacidad
+                                        de alcanzar efectivamente a los no creyentes para Cristo.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-12">
+                            <a href="programas.html"
+                                class="inline-flex items-center justify-center px-8 py-3 text-base font-semibold text-white bg-[var(--secondary-color)] rounded-md shadow-lg transition-all hover:bg-[var(--cres-gold-dark)] uppercase tracking-wide">
+                                Solicitar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LA IGLESIA MERECE LÍDERES CAPACITADOS -->
+                <section class="py-20 bg-[var(--background-soft)]">
+                    <div class="container mx-auto px-4 max-w-6xl">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                            <div class="order-2 lg:order-1">
+                                <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800"
+                                    alt="Graduados" class="rounded-lg shadow-xl w-full">
+                            </div>
+                            <div class="order-1 lg:order-2">
+                                <h2 class="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-6">
+                                    LA IGLESIA MERECE LÍDERES CAPACITADOS.
+                                </h2>
+                                <p class="text-lg text-[var(--text-secondary)] mb-6 leading-relaxed">
+                                    Los líderes de la iglesia deben estar equipados en la Biblia, habilidades
+                                    ministeriales y comprometidos con el crecimiento espiritual, tanto para ellos mismos
+                                    como para otros. Sin embargo, muchos líderes no perseveran en el ministerio porque
+                                    les falta una de estas áreas.
                                 </p>
+                                <h3 class="text-xl font-bold text-[var(--text-primary)] mb-4 uppercase tracking-wide">
+                                    Nuestro currículo está diseñado para:
+                                </h3>
+                                <ul class="space-y-3 text-[var(--text-secondary)]">
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[var(--secondary-color)] mt-1">•</span>
+                                        <span>Hacerte crecer en tu caminar con Cristo</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[var(--secondary-color)] mt-1">•</span>
+                                        <span>Equiparte para predicar y enseñar la Biblia</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[var(--secondary-color)] mt-1">•</span>
+                                        <span>Desarrollar una perspectiva teológica arraigada en las Escrituras</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <span class="text-[var(--secondary-color)] mt-1">•</span>
+                                        <span>Mejorar tus habilidades ministeriales</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <div
-                                class="transform rounded-lg border border-[var(--accent-color)] bg-white p-8 text-center shadow-md transition-transform hover:-translate-y-2">
-                                <div class="inline-block rounded-full bg-[var(--primary-color)] p-4 text-white"><svg
-                                        fill="currentColor" height="32px" viewBox="0 0 256 256" width="32px"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z">
-                                        </path>
-                                    </svg></div>
-                                <h3 class="mt-6 text-lg font-semibold text-[var(--secondary-color)]">Proyectos Enfocados
-                                    en la Industria</h3><!-- MODIFICADO: Descripción más específica -->
-                                <p class="mt-2 text-sm text-[var(--text-secondary)]">Participa en proyectos del mundo
-                                    real y colabora con empresas líderes, lo que te desafiará a aplicar tus habilidades
-                                    en escenarios concretos y te preparará para las demandas del mundo profesional.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- NUEVA SECCIÓN: Testimonios -->
-                <section class="py-20 sm:py-24 bg-[var(--background-color)]">
-                    <div class="container mx-auto px-4 text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">La
-                            Experiencia de Nuestros Alumnos</h2>
-                        <div class="mt-12 grid gap-8 md:grid-cols-2">
-                            <!-- TESTIMONIO 1: Espacio para contenido real -->
-                            <div class="bg-[var(--accent-color)] p-8 rounded-lg shadow-md">
-                                <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO/ALUMNO -->
-                                <img src="https://i.pravatar.cc/150?img=3" alt="Foto de Estudiante de ISC"
-                                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-                                <!-- FIN: ESPACIO PARA FOTO REAL -->
-
-                                <p class="text-lg italic text-[var(--text-primary)]">"El enfoque práctico de las
-                                    materias y el apoyo constante de los profesores fueron fundamentales. Aquí no solo
-                                    aprendes teoría, ¡creamos el futuro!"</p>
-
-                                <!-- INICIO: ESPACIO PARA NOMBRE Y DATOS REALES -->
-                                <p class="mt-4 font-semibold text-[var(--primary-color)]">- Mario A. Kempes, Egresado
-                                    2019, Proyect Manager</p>
-                                <!-- FIN: ESPACIO PARA NOMBRE Y DATOS REALES -->
-                            </div>
-                            <!-- TESTIMONIO 2: Espacio para contenido real -->
-                            <div class="bg-[var(--accent-color)] p-8 rounded-lg shadow-md">
-                                <!-- INICIO: ESPACIO PARA FOTO REAL DEL EGRESADO/ALUMNO -->
-                                <img src="https://i.pravatar.cc/150?img=68" alt="Foto de Egresado de ISC"
-                                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
-                                <!-- FIN: ESPACIO PARA FOTO REAL -->
-
-                                <p class="text-lg italic text-[var(--text-primary)]">"Gracias a la formación en el ITCM,
-                                    pude incorporarme rápidamente a la industria. Las especialidades son muy relevantes
-                                    y me abrieron muchas puertas."</p>
-
-                                <!-- INICIO: ESPACIO PARA NOMBRE Y DATOS REALES -->
-                                <p class="mt-4 font-semibold text-[var(--primary-color)]">- Ricardo M. Garza, Egresado
-                                    2022, Desarrollador de Software</p>
-                                <!-- FIN: ESPACIO PARA NOMBRE Y DATOS REALES -->
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="bg-[var(--accent-color)] py-20 sm:py-24">
-                    <div class="container mx-auto px-4">
-                        <div class="grid items-center gap-12 lg:grid-cols-2">
-                            <div>
-                                <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">
-                                    Nuestra Misión y Visión</h2>
-                                <p class="mt-4 text-lg text-[var(--text-secondary)]">Nuestra misión es cultivar la
-                                    próxima generación de líderes tecnológicos proporcionando una educación rigurosa y
-                                    relevante en ingeniería de sistemas computacionales.</p>
-                                <p class="mt-4 text-lg text-[var(--text-secondary)]">Visualizamos a nuestros graduados
-                                    como innovadores que impulsan los avances tecnológicos y contribuyen a un mundo
-                                    conectado e inteligente.</p>
-                            </div>
-                            <div class="h-64 rounded-lg bg-cover bg-center shadow-lg lg:h-96"
-                                style="background-image: url('https://www.cdmadero.tecnm.mx/images/noticias/2024/agosto/semicon5.jpg')">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="py-20 sm:py-24">
-                    <div class="container mx-auto px-4 text-center">
-                        <h2 class="text-3xl font-bold tracking-tight text-[var(--secondary-color)] sm:text-4xl">¿Listo
-                            para Empezar tu Viaje?</h2>
-                        <p class="mx-auto mt-4 max-w-2xl text-lg text-[var(--text-secondary)]">Descubre cómo nuestro
-                            programa puede ayudarte a alcanzar tus aspiraciones profesionales en la industria
-                            tecnológica.</p>
-                        <div class="mt-8">
-                            <!-- MODIFICADO: CTA para ser más claro sobre las opciones -->
-                            <a href="https://www.cdmadero.tecnm.mx/index.php/admision/convocatoria-licenciatura"
-                                target="_blank" rel="noopener noreferrer"
-                                class="inline-flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-md bg-[var(--primary-color)] px-8 py-4 text-base font-bold text-white shadow-lg transition-transform hover:scale-105 mx-2">
-                                <span class="truncate">Inicia tu Admisión</span>
-                            </a>
-                            <a href="contacto.html"
-                                class="inline-flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-md border border-[var(--primary-color)] bg-transparent px-8 py-4 text-base font-bold text-[var(--primary-color)] shadow-lg transition-all hover:bg-[var(--primary-color)] hover:text-white mx-2">
-                                <span class="truncate">Contáctanos</span>
-                            </a>
                         </div>
                     </div>
                 </section>
             </main>
-
 
             <!-- Footer Component -->
             <div id="footer-placeholder"></div>
