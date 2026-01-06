@@ -1,75 +1,84 @@
 /**
  * Menu Handler - ISC-ITCM
- * Maneja la funcionalidad del menú móvil con transición
+ * Código idéntico al de CRES que funciona
  */
 
-(function () {
-    'use strict';
+console.log('🔧 Loading mobile menu...');
 
-    function initMenu() {
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIconOpen = document.getElementById('menu-icon-open');
-        const menuIconClose = document.getElementById('menu-icon-close');
+window.addEventListener('DOMContentLoaded', function () {
+    setTimeout(initMenu, 500);
+});
 
-        if (!menuBtn || !mobileMenu || !menuIconOpen || !menuIconClose) {
-            console.warn('Menu elements not found. Waiting for components to load...');
-            return;
-        }
+document.addEventListener('componentsLoaded', function () {
+    console.log('🎯 Components loaded, initializing menu...');
+    initMenu();
+});
 
-        // Toggle del menú con transición
-        const toggleMenu = () => {
-            const isHidden = mobileMenu.classList.contains('hidden');
+function initMenu() {
+    const navToggle = document.getElementById('menu-btn');
+    const navMenu = document.getElementById('mobile-menu');
+    const menuIconOpen = document.getElementById('menu-icon-open');
+    const menuIconClose = document.getElementById('menu-icon-close');
 
-            if (isHidden) {
-                // Abrir menú con transición
-                mobileMenu.classList.remove('hidden');
-                // Forzar reflow
-                mobileMenu.offsetHeight;
-                mobileMenu.classList.remove('translate-x-full');
+    console.log('navToggle:', navToggle);
+    console.log('navMenu:', navMenu);
+    console.log('menuIconOpen:', menuIconOpen);
+    console.log('menuIconClose:', menuIconClose);
 
-                menuIconOpen.classList.toggle('hidden');
-                menuIconClose.classList.toggle('hidden');
-                document.body.style.overflow = 'hidden';
-            } else {
-                // Cerrar menú con transición
-                mobileMenu.classList.add('translate-x-full');
-
-                setTimeout(() => {
-                    mobileMenu.classList.add('hidden');
-                }, 300);
-
-                menuIconOpen.classList.toggle('hidden');
-                menuIconClose.classList.toggle('hidden');
-                document.body.style.overflow = '';
-            }
-        };
-
-        // Click en el botón del menú
-        menuBtn.addEventListener('click', toggleMenu);
-
-        // Cerrar menú al hacer click en un enlace
-        const navLinks = mobileMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('translate-x-full');
-
-                    setTimeout(() => {
-                        mobileMenu.classList.add('hidden');
-                    }, 300);
-
-                    menuIconOpen.classList.remove('hidden');
-                    menuIconClose.classList.add('hidden');
-                    document.body.style.overflow = '';
-                }
-            });
-        });
+    if (!navToggle || !navMenu || !menuIconOpen || !menuIconClose) {
+        console.error('❌ Menu elements not found!');
+        return;
     }
 
-    // Inicializar cuando los componentes estén cargados
-    document.addEventListener('componentsLoaded', initMenu);
+    console.log('✅ Menu elements found!');
 
-    // Fallback: intentar inicializar después de un delay
-    setTimeout(initMenu, 500);
-})();
+    // Toggle menu with transition
+    navToggle.onclick = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        const isHidden = navMenu.classList.contains('hidden');
+        console.log('Menu toggled:', isHidden ? 'opening' : 'closing');
+
+        if (isHidden) {
+            // Abrir menú con transición
+            navMenu.classList.remove('hidden');
+            // Forzar reflow
+            navMenu.offsetHeight;
+            navMenu.classList.remove('translate-x-full');
+
+            menuIconOpen.classList.add('hidden');
+            menuIconClose.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Cerrar menú con transición
+            navMenu.classList.add('translate-x-full');
+
+            setTimeout(() => {
+                navMenu.classList.add('hidden');
+            }, 300);
+
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+    };
+
+    // Close on link click
+    const links = navMenu.querySelectorAll('a');
+    links.forEach(link => {
+        link.onclick = function () {
+            navMenu.classList.add('translate-x-full');
+
+            setTimeout(() => {
+                navMenu.classList.add('hidden');
+            }, 300);
+
+            menuIconOpen.classList.remove('hidden');
+            menuIconClose.classList.add('hidden');
+            document.body.style.overflow = '';
+        };
+    });
+
+    console.log('✅ Mobile menu initialized!');
+}
