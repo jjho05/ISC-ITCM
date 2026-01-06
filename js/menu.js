@@ -1,6 +1,6 @@
 /**
- * Menu Handler
- * Maneja la funcionalidad del menú móvil
+ * Menu Handler - ISC-ITCM
+ * Maneja la funcionalidad del menú móvil con transición
  */
 
 (function () {
@@ -17,11 +17,32 @@
             return;
         }
 
-        // Toggle del menú
+        // Toggle del menú con transición
         const toggleMenu = () => {
-            mobileMenu.classList.toggle('hidden');
-            menuIconOpen.classList.toggle('hidden');
-            menuIconClose.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+
+            if (isHidden) {
+                // Abrir menú con transición
+                mobileMenu.classList.remove('hidden');
+                // Forzar reflow
+                mobileMenu.offsetHeight;
+                mobileMenu.classList.remove('translate-x-full');
+
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Cerrar menú con transición
+                mobileMenu.classList.add('translate-x-full');
+
+                setTimeout(() => {
+                    mobileMenu.classList.add('hidden');
+                }, 300);
+
+                menuIconOpen.classList.toggle('hidden');
+                menuIconClose.classList.toggle('hidden');
+                document.body.style.overflow = '';
+            }
         };
 
         // Click en el botón del menú
@@ -32,7 +53,15 @@
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (!mobileMenu.classList.contains('hidden')) {
-                    toggleMenu();
+                    mobileMenu.classList.add('translate-x-full');
+
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                    }, 300);
+
+                    menuIconOpen.classList.remove('hidden');
+                    menuIconClose.classList.add('hidden');
+                    document.body.style.overflow = '';
                 }
             });
         });
@@ -41,6 +70,6 @@
     // Inicializar cuando los componentes estén cargados
     document.addEventListener('componentsLoaded', initMenu);
 
-    // Fallback: intentar inicializar después de un delay si el evento no se dispara
+    // Fallback: intentar inicializar después de un delay
     setTimeout(initMenu, 500);
 })();
