@@ -1,8 +1,4 @@
-/**
- * Menu Handler - ISC-ITCM
- * Código idéntico al de CRES que funciona
- */
-
+// Simple Mobile Menu - ISC-ITCM
 console.log('🔧 Loading mobile menu...');
 
 window.addEventListener('DOMContentLoaded', function () {
