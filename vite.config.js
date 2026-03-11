@@ -1,8 +1,19 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   base: '/ISC-ITCM/',
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'components',
+          dest: ''
+        }
+      ]
+    })
+  ],
   build: {
     rollupOptions: {
       input: {

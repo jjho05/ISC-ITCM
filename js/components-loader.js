@@ -9,11 +9,19 @@
     // Detectar profundidad de la carpeta actual
     function getBasePath() {
         const path = window.location.pathname;
-        const depth = (path.match(/\//g) || []).length - 1;
+        const repoBase = '/ISC-ITCM/';
+        
+        // Limpiamos el path quitando el nombre del repo si existe
+        let relativePath = path;
+        if (path.startsWith(repoBase)) {
+            relativePath = path.substring(repoBase.length - 1); // Deja el / inicial
+        }
 
-        // Si estamos en la raíz o en una página principal
+        const depth = (relativePath.match(/\//g) || []).length - 1;
+
+        // Si estamos en la raíz o en una página principal (ya sin el prefijo del repo)
         if (depth <= 1) {
-            return './';
+            return '';
         }
         // Si estamos en un subdirectorio (semestre1, bigdata, etc.)
         return '../';
@@ -21,8 +29,10 @@
 
     // Cargar un componente
     async function loadComponent(componentName, placeholderId) {
+        const repoBase = '/ISC-ITCM/';
         const basePath = getBasePath();
-        const componentPath = `${basePath}components/${componentName}.html`;
+        // Construimos la ruta absoluta dentro del repo
+        const componentPath = `${repoBase}${basePath}components/${componentName}.html`;
 
         try {
             const response = await fetch(componentPath);
