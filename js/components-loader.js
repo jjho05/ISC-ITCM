@@ -6,33 +6,25 @@
 (function () {
     'use strict';
 
-    // Detectar profundidad de la carpeta actual
-    function getBasePath() {
+    // Obtener el BASE_URL de Vite (ej: '/ISC-ITCM/' o '/')
+    const BASE_URL = import.meta.env.BASE_URL || '/';
+
+    // Detectar profundidad de la carpeta actual para otros ajustes si son necesarios
+    function getRelativeDepth() {
         const path = window.location.pathname;
-        const repoBase = '/ISC-ITCM/';
+        const base = BASE_URL.endsWith('/') ? BASE_URL : BASE_URL + '/';
         
-        // Limpiamos el path quitando el nombre del repo si existe
         let relativePath = path;
-        if (path.startsWith(repoBase)) {
-            relativePath = path.substring(repoBase.length - 1); // Deja el / inicial
+        if (path.startsWith(base)) {
+            relativePath = path.substring(base.length - 1);
         }
-
-        const depth = (relativePath.match(/\//g) || []).length - 1;
-
-        // Si estamos en la raíz o en una página principal (ya sin el prefijo del repo)
-        if (depth <= 1) {
-            return '';
-        }
-        // Si estamos en un subdirectorio (semestre1, bigdata, etc.)
-        return '../';
+        return (relativePath.match(/\//g) || []).length - 1;
     }
 
     // Cargar un componente
     async function loadComponent(componentName, placeholderId) {
-        const repoBase = '/ISC-ITCM/';
-        const basePath = getBasePath();
-        // Construimos la ruta absoluta dentro del repo
-        const componentPath = `${repoBase}${basePath}components/${componentName}.html`;
+        // Usamos BASE_URL para asegurar que la ruta sea siempre absoluta respecto al repo
+        const componentPath = `${BASE_URL}components/${componentName}.html`.replace(/\/+/g, '/');
 
         try {
             const response = await fetch(componentPath);
@@ -74,23 +66,20 @@
         });
     }
 
-    // Ajustar rutas relativas en los componentes según la profundidad
+    // Ajustar rutas relativas en los componentes según la profundidad (para imágenes o links internos)
     function adjustComponentPaths() {
-        const basePath = getBasePath();
+        const depth = getRelativeDepth();
 
         // Solo ajustar si estamos en un subdirectorio
-        if (basePath === '../') {
-            // Ajustar enlaces del header y footer
+        if (depth > 1) {
             const links = document.querySelectorAll('header a[href], footer a[href], #mobile-menu a[href]');
             links.forEach(link => {
                 const href = link.getAttribute('href');
-                // Solo ajustar enlaces relativos (no externos ni anclas)
                 if (href && !href.startsWith('http') && !href.startsWith('#') && !href.startsWith('../')) {
                     link.setAttribute('href', '../' + href);
                 }
             });
 
-            // Ajustar imágenes
             const images = document.querySelectorAll('header img[src], footer img[src]');
             images.forEach(img => {
                 const src = img.getAttribute('src');
@@ -103,23 +92,16 @@
 
     // Inicializar cuando el DOM esté listo
     async function init() {
-        // Cargar componentes
         await Promise.all([
             loadComponent('header', 'header-placeholder'),
             loadComponent('footer', 'footer-placeholder')
         ]);
 
-        // Ajustar rutas si es necesario
         adjustComponentPaths();
-
-        // Marcar navegación activa
         setActiveNavigation();
-
-        // Disparar evento personalizado para indicar que los componentes están cargados
         document.dispatchEvent(new Event('componentsLoaded'));
     }
 
-    // Ejecutar cuando el DOM esté listo
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {
