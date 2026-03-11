@@ -16,33 +16,7 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <style type="text/tailwindcss">
-        :root {
-            /* Colores Oficiales TecNM - Manual de Identidad 2025 */
-            --tecnm-blue: #1B396A;        /* Pantone 294 C - Azul oficial */
-            --tecnm-gray: #807F83;        /* Cool Gray 10 C */
-            --tecnm-black: #000000;       /* Negro 100% */
-            --tecnm-silver: #ABABAB;      /* Pantone 877 C */
-            
-            /* Aplicación de colores */
-            --primary-color: #1B396A;     /* Azul oficial TecNM */
-            --secondary-color: #14305C;   /* Azul oscuro complementario */
-            --accent-color: #f0f2f4;      /* Gris claro */
-            --text-primary: #000000;      /* Negro oficial */
-            --text-secondary: #807F83;    /* Gris oficial */
-            --background-color: #ffffff;
-            --border-color: #dce0e5;
-        }
-        body {
-            font-family: "Noto Sans", sans-serif;
-        }
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 700;
-        }
-    </style>
+    <link href="/css/main.css" rel="stylesheet" />
 </head>
 
 <body class="bg-[var(--background-color)] text-[var(--text-primary)]">
@@ -224,8 +198,8 @@
     </div>
 
     <!-- Component Loader Scripts -->
-    <script src="js/components-loader.js"></script>
-    <script src="js/menu.js"></script>
+    <script type="module" src="/js/components-loader.js"></script>
+    <script type="module" src="/js/menu.js"></script>
 </body>
 
 </html>

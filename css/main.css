@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* Colores Oficiales TecNM - Manual de Identidad 2025 */
+    --tecnm-blue: #1B396A;        /* Pantone 294 C - Azul oficial */
+    --tecnm-gray: #807F83;        /* Cool Gray 10 C */
+    --tecnm-black: #000000;       /* Negro 100% */
+    --tecnm-silver: #ABABAB;      /* Pantone 877 C */
+    
+    /* Aplicación de colores */
+    --primary-color: #1B396A;     /* Azul oficial TecNM */
+    --secondary-color: #14305C;   /* Azul oscuro complementario */
+    --accent-color: #f0f2f4;      /* Gris claro */
+    --text-primary: #000000;      /* Negro oficial */
+    --text-secondary: #807F83;    /* Gris oficial */
+    --background-color: #ffffff;
+    --border-color: #dce0e5;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--background-color)] text-[var(--text-primary)];
+    font-family: "Noto Sans", sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: "Montserrat", sans-serif;
+  }
+}
