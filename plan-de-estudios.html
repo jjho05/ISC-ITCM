@@ -14,52 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     
-    <style type="text/tailwindcss">
-        :root {
-            --primary-color: #1B396A;
-            --secondary-color: #14305C;
-            --accent-color: #f0f2f4;
-            --text-primary: #000000;
-            --text-secondary: #807F83;
-            --background-color: #ffffff;
-            --border-color: #dce0e5;
-        }
-        body {
-            font-family: "Noto Sans", sans-serif;
-        }
-        .materia-card, .materia-placeholder, .materia-no-click {
-            @apply border border-gray-300 bg-white rounded p-2 flex flex-col justify-between text-center min-h-[80px] transition-all duration-300;
-        }
-        a.materia-card:hover {
-            @apply scale-105 shadow-lg border-[var(--primary-color)] -translate-y-1 z-10 relative;
-        }
-        .materia-card p, .materia-placeholder p, .materia-no-click p {
-            @apply font-bold text-gray-800 flex-grow;
-        }
-        .materia-card small, .materia-placeholder small, .materia-no-click small {
-            @apply text-gray-500;
-        }
-        .materia-card div, .materia-placeholder div, .materia-no-click div {
-            @apply flex justify-center gap-1 mt-1;
-        }
-        .materia-card div span, .materia-placeholder div span, .materia-no-click div span {
-            @apply border border-gray-400 rounded-sm w-4 h-4 flex items-center justify-center;
-        }
-        .materia-especialidad {
-            @apply bg-blue-50 border-blue-300 shadow-inner;
-        }
-        .materia-especialidad:hover {
-            @apply border-[var(--primary-color)];
-        }
-        .btn-especialidad.active {
-            @apply bg-[var(--secondary-color)] text-white scale-105 shadow-md;
-        }
-    
-        h1, h2, h3, h4, h5, h6 {
-            font-family: "Montserrat", sans-serif;
-            font-weight: 700;
-        }
-    </style>
 </head>
 <body class="bg-gray-50 text-[var(--text-primary)]">
 <div class="relative flex size-full min-h-screen flex-col overflow-x-hidden">
